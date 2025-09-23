@@ -9,5 +9,7 @@ const Home = () => {
 }
 
 export default Home; 
-const styles = StyleSheet.create({})
+
+// stylesheet object 
+const styles = StyleSheet.create({})    
 
