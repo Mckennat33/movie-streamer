@@ -1,12 +1,24 @@
 import { StyleSheet, Text, View } from "react-native";
+import useState from 'react'
+
 
 const SignUp = () => {
     const [ email, setUserEmail ] = useState('')
     const [ password, setUserPassword ] = useState('')
 
+    const userData = {
+        email: email, 
+        password: password
+    }
 // take username 
 // take passowrd  
-
+    const signUpUser = fetch({
+        method: "Post", 
+        headers: {
+            'Content-Type': 'application/json'
+        }, 
+        body: JSON.stringify(userData)
+    })
 
 
     return (
@@ -18,6 +30,7 @@ const SignUp = () => {
             <TextInput
                 onChangeText={setUserPassword}
             > Password </TextInput>
+
         </View>
     )
 }
