@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View } from "react-native";
-
+import { useState, useEffect } from 'react'
 
 const Home = () => {
+
+
+
   return (
     <View>
-      <Text>Hello From Thomas</Text>
+      <Text>Home Page</Text>
     </View>
   );
 }

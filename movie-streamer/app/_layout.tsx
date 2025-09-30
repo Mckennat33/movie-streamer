@@ -1,29 +1,22 @@
 import { StyleSheet, Text, View } from "react-native";
-import { Slot, Stack  } from 'expo-router'
-import { StackRouter } from "expo-router/build/layouts/StackClient";
+import { Slot, Stack, Redirect  } from 'expo-router'
+import { useState, useEffect } from 'react'
+import { NavigationContainer } from "@react-navigation/native";
 
+const RootLayout = () => {
 
-const rootLayout = () => {
   return (
-      <Stack>
-        <Stack.Screen name="index" options={{title: 'Home'}} />
-      </Stack>
+    <Stack>
+      <Stack.Screen name="home" options={{ headerShown: false }} />
+      <Stack.Screen name="profile" options={{ headerShown: false }} />
+      
+      <Stack.Screen name="login" options={{ headerShown: false }} />
+      <Stack.Screen name="signup" options={{ headerShown: false }} />
+
+  
+    </Stack>
   );
-}
+};
 
-export default rootLayout; 
+export default RootLayout;
 
-// stylesheet object 
-const styles = StyleSheet.create({})    
-
-
-
-// import { Stack } from "expo-router";
-
-
-
-// export default function RootLayout() {
-//   return <Stack />;
-// }
-
-// root layout - shows up on every page of the application- think of the bottom of the instagram page. 
