@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Redirect } from "expo-router";
 import { Link } from "expo-router";
 
-const Home = () => {
+const Profile = () => {
 
   const [ isLoggedIn, setIsLoggedIn ] = useState(null)
 
@@ -11,16 +11,13 @@ const Home = () => {
 
   return (
     <View>
-      <Text>Home Page</Text>
-      <Link href="/profile" >
-        Profile
-      </Link>
+      <Text>Profile Page</Text>
+
     </View>
   );
 }
 
-export default Home; 
+export default Profile; 
 
 // stylesheet object 
-const styles = StyleSheet.create({})    
-
+const styles = StyleSheet.create({})  
