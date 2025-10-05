@@ -4,20 +4,25 @@ import { Redirect } from "expo-router";
 import { Link } from "expo-router";
 
 const Profile = () => {
-
   const [ isLoggedIn, setIsLoggedIn ] = useState(null)
-
-
-
   return (
-    <View>
-      <Text>Profile Page</Text>
+    <View style={styles.container}>
+      <Text style={styles.text} >Profile Page</Text>
 
     </View>
   );
 }
 
 export default Profile; 
-
-// stylesheet object 
-const styles = StyleSheet.create({})  
+ 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#25292e',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    color: '#fff',
+  },
+});
