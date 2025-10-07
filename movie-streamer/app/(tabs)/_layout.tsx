@@ -7,18 +7,31 @@ import { Ionicons } from '@expo/vector-icons'
 
 const TabLayout = () => {
   return (
-    <Tabs>
-      <Tabs.Screen name="home" options={{ title: 'Home', tabBarIcon: () => (
+    <Tabs screenOptions={{
+    tabBarActiveTintColor: '#ffd33d',
+    headerStyle: {
+      backgroundColor: '#25292e',
+    },
+    headerShadowVisible: false,
+    headerTintColor: '#fff',
+    tabBarStyle: {
+      backgroundColor: '#25292e',
+    },
+  }}>
+      <Tabs.Screen  name="home" options={{ title: 'Home', 
+      tabBarIcon: ({ color, size, focused }) => (
         <Ionicons 
-          size={24}
+          size={size}
           name="home"
+          color={color}
         />
       )}} 
       />
-      <Tabs.Screen name="profile" options={{ title: 'Profile', tabBarIcon: () => (
+      <Tabs.Screen name="profile" options={{ title: 'Profile', tabBarIcon: ({ color, size, focused }) => (
         <Ionicons 
-          size={24}
+          size={size}
           name="person"
+          color={color}
         />
       ) }} />
     </Tabs>
@@ -26,3 +39,12 @@ const TabLayout = () => {
 };
 
 export default TabLayout;
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, 
+    justifyContent: "center", 
+    alignItems: "center"
+  }
+})
