@@ -1,11 +1,17 @@
 import { View, Text, StyleSheet } from 'react-native'
+import { Image } from 'expo-image';
+import ImageViewer from '@/components/ImageViewer';
 
+
+const PlaceholderImage = require('@/assets/images/android-icon-background.png');
 
 const Home = () => {
-  return (
+    return (
     <View style={styles.container}>
       <Text style={styles.text} >Home Page</Text>
-
+            <View style={styles.imageContainer}>
+            <ImageViewer imgSource={PlaceholderImage} />
+      </View>
     </View>
   );
 }
@@ -21,5 +27,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#fff',
+  },
+      imageContainer: {
+    flex: 1,
   },
 });
