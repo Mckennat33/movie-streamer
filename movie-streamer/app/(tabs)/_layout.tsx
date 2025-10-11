@@ -7,6 +7,9 @@ import { Ionicons } from '@expo/vector-icons'
 
 const TabLayout = () => {
   return (
+
+    // This is what is dictating what is on the screen
+
     <Tabs screenOptions={{
     tabBarActiveTintColor: '#ffd33d',
     headerStyle: {
