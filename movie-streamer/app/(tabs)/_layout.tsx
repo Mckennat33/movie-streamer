@@ -6,39 +6,46 @@ import { Tabs } from "expo-router";
 import { Ionicons } from '@expo/vector-icons'
 
 const TabLayout = () => {
-  return (
+  
+  const session = false
 
-    // This is what is dictating what is on the screen
+    return !session ? <Redirect href="../app/signup" /> : <Slot /> 
 
-    <Tabs screenOptions={{
-    tabBarActiveTintColor: '#ffd33d',
-    headerStyle: {
-      backgroundColor: '#25292e',
-    },
-    headerShadowVisible: false,
-    headerTintColor: '#fff',
-    tabBarStyle: {
-      backgroundColor: '#25292e',
-    },
-  }}>
-      <Tabs.Screen  name="home" options={{ title: 'Home', 
-      tabBarIcon: ({ color, size, focused }) => (
-        <Ionicons 
-          size={size}
-          name="home"
-          color={color}
-        />
-      )}} 
-      />
-      <Tabs.Screen name="profile" options={{ title: 'Profile', tabBarIcon: ({ color, size, focused }) => (
-        <Ionicons 
-          size={size}
-          name="person"
-          color={color}
-        />
-      ) }} />
-    </Tabs>
-  );
+  // return (
+
+  //   // This is what is dictating what is on the screen
+
+  
+
+  //   <Tabs screenOptions={{
+  //   tabBarActiveTintColor: '#ffd33d',
+  //   headerStyle: {
+  //     backgroundColor: '#25292e',
+  //   },
+  //   headerShadowVisible: false,
+  //   headerTintColor: '#fff',
+  //   tabBarStyle: {
+  //     backgroundColor: '#25292e',
+  //   },
+  // }}>
+  //     <Tabs.Screen  name="home" options={{ title: 'Home', 
+  //     tabBarIcon: ({ color, size, focused }) => (
+  //       <Ionicons 
+  //         size={size}
+  //         name="home"
+  //         color={color}
+  //       />
+  //     )}} 
+  //     />
+  //     <Tabs.Screen name="profile" options={{ title: 'Profile', tabBarIcon: ({ color, size, focused }) => (
+  //       <Ionicons 
+  //         size={size}
+  //         name="person"
+  //         color={color}
+  //       />
+  //     ) }} />
+  //   </Tabs>
+  // ); 
 };
 
 export default TabLayout;
