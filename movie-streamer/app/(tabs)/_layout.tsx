@@ -6,14 +6,14 @@ import { Tabs } from "expo-router";
 import { Ionicons } from '@expo/vector-icons'
 import Home from "./home";
 import Profile from "./profile"
-import Login from "../login"
+import Signup from "../signup"
 
 const TabLayout = () => {
   
   const session = false
 
     // return !session ? <Redirect href="/signup" /> : <Profile /> 
-    return !session ? <Login /> : <Home />
+    return !session ? <Signup /> : <Home />
 
     // C:\Users\thoma\movie-streamer\movie-streamer\app\signup.jsx
 
