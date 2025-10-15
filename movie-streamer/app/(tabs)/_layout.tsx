@@ -4,16 +4,22 @@ import { useState, useEffect } from 'react'
 import { NavigationContainer } from "@react-navigation/native";
 import { Tabs } from "expo-router";
 import { Ionicons } from '@expo/vector-icons'
+import Home from "./home";
+import Profile from "./profile"
+import Login from "../login"
 
 const TabLayout = () => {
   
   const session = false
 
-    return !session ? <Redirect href="../app/signup" /> : <Slot /> 
+    // return !session ? <Redirect href="/signup" /> : <Profile /> 
+    return !session ? <Login /> : <Home />
+
+    // C:\Users\thoma\movie-streamer\movie-streamer\app\signup.jsx
 
   // return (
 
-  //   // This is what is dictating what is on the screen
+  // //   // This is what is dictating what is on the screen
 
   
 

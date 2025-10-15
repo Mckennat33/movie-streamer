@@ -10,18 +10,7 @@ const Login = () => {
 
     return (
         <View>
-            <Text>Login</Text>
-            <TextInput 
-                onChangeText={setUsername}
-            >
-                Username
-            </TextInput>
-            <TextInput
-                onChangeText={setPassword}
-            >
-                Password
-            </TextInput>
-
+            <text>Login page</text>
         </View>
     )
 }
